@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #ecf0f1;
+}
+
+#menu-wrapper {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  background-color: #34495e;
+}
+
+.nav-item {
+  color: white;
+  &:hover {
+    background-color: #95a5a6;
+    cursor: pointer;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+#container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+
+img {
+  max-width: 200px;
+}
+
+.product {
+  background-color: #6285a8;
+  padding: 20px;
+  margin: 10px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.buy-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}

@@ -5,17 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="menu-wrapper"></div>
+  <div id="menu-wrapper">
+      <p class="nav-item">Logo Placeholder</p>
+      <p class="nav-item">Feed</p>
+      <p class="nav-item">Hot Deals</p>
+      <p class="nav-item">Add</p>
+      <button>SIGN UP</button>
+      <button>LOG IN</button>
+  </div>
 
   <div id=container></div>
 
 
   <script id="products-template" type="text/x-handlebars-template">
-    
+    {{#each data}}
+    <div class="product">
+      <p>{{title}}</p>
+      <div><img src="{{image}}" /></div>
+      <div class="info-container">
+        <p>{{comments}} comments</p>
+        <p>{{likes}} likes</p>
+      </div>
+      <div class="buy-container">
+        <p>{{price}}{{currency}}</p>
+        <button>Buy Now</button>
+      </div>
+    </div>
+    {{/each}}
   </script>
 
   <script src="/jquery/dist/jquery.js"></script>
