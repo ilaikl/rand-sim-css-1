@@ -4,6 +4,13 @@ const renderer = new Renderer()
 const loadPage = async function () {
   await pManager.getProducts()
   renderer.renderProducts(pManager.products)
+  $("#loadAll").remove()
 }
 
-loadPage()
+const loadInit = async function () {
+  await pManager.getProducts()
+  renderer.renderProducts(pManager.products.slice(0,6))
+}
+
+
+loadInit()

@@ -1,49 +1,126 @@
 body {
   margin: 0;
   height: 100vh;
-  background-color: #ecf0f1;
 }
 #menu-wrapper {
+  position: fixed;
   height: 10vh;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1fr 3fr 1fr ;
   align-items: center;
-  background-color: #34495e;
+  background-color:rgb(255, 255, 255, 0.7) ;
+  z-index: 1;
+  box-shadow: 0 1px 6px #5555;
 }
-.nav-item {
-  color: white;
+
+#container img{
+  height: 24vh;
+  width: 16vw;
+  justify-self: center;
+  align-self: center;
+  
+}
+.imgDiv{
+  display: grid;
+}
+#mainLogo{
+  display: grid;
+  height: 10vh;
+  top: 0;
+  position: absolute;
+}
+#nav-items{
+  display: inline-block;
+}
+#nav-buttons{
+  display: inline-block;
+}
+
+.nav-item{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif ;
+  text-align: center;
+  margin: 15px;
+  /* padding: 15px; */
 }
 .nav-item:hover {
-  background-color: #95a5a6;
+  color: grey;
   cursor: pointer;
+  margin: 10px;
 }
-button {
-  cursor: pointer;
+#menu-wrapper button {
+  border: 1px solid lightgrey;
+  border-radius: 1.5ch;
+  background-color: white ;
+  text-align: center;
 }
+
 #container {
+  top: 10vh;
+  position: relative;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  justify-items: center;
+  align-content: center;
 }
-img {
-  max-width: 200px;
+#container p{
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  max-height: 1.2em;
 }
 .product {
-  background-color: #6285a8;
-  padding: 20px;
-  margin: 10px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  height: 45vh;
+  width: 20vw;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 1ch;
 }
 .info-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
+  display: grid;
   justify-items: center;
   align-items: center;
+}
+.title{
+  font-weight: bold; 
+}
+.info-container-text{
+  font-size: 13px;
+border: 1px solid lightgrey;
+color: grey;
+font-weight: lighter;
+display: grid;
+justify-content: center;
+align-content: center;
+padding: 10px;
 }
 .buy-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
+}
+.buy-container button{
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+.buy-container p{
+  color: rgb(255, 115, 0);
+  font-weight: bold;
+}
+#loadAll{
+  border: none;
+    background-color: rgb(255, 115, 0);
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    color: white;
+    border-radius: 1ch;
+}
 }

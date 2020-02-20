@@ -11,25 +11,35 @@
 <body>
 
   <div id="menu-wrapper">
-      <p class="nav-item">Logo Placeholder</p>
-      <p class="nav-item">Feed</p>
-      <p class="nav-item">Hot Deals</p>
-      <p class="nav-item">Add</p>
-      <button>SIGN UP</button>
-      <button>LOG IN</button>
+    <div>
+      <img id="mainLogo" src="./images/logo.jpg"></img>
+    </div>
+
+      <div id="nav-items">
+        <sppan class="nav-item">Feed</span>
+        <span class="nav-item">Hot Deals</span>
+        <span class="nav-item">Add</span>
+      </div>
+
+      <div id="nav-buttons">
+        <button>SIGN UP</button>
+        <button>LOG IN</button>
+      </div>
   </div>
 
   <div id=container></div>
+
+  <button id="loadAll" onclick="loadPage()">Load More</button>
 
 
   <script id="products-template" type="text/x-handlebars-template">
     {{#each data}}
     <div class="product">
-      <p>{{title}}</p>
-      <div><img src="{{image}}" /></div>
+      <div class="imgDiv"><img src="{{image}}" /></div>
+      <p class="title"> {{title}}</p>
       <div class="info-container">
-        <p>{{comments}} comments</p>
-        <p>{{likes}} likes</p>
+        <p class="info-container-text">{{comments}} comments</p>
+        <p class="info-container-text">{{likes}} likes</p>
       </div>
       <div class="buy-container">
         <p>{{price}}{{currency}}</p>
